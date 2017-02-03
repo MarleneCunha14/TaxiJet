@@ -1,0 +1,23 @@
+﻿body,html{
+
+    background-color:gainsboro;
+}
+
+h2{
+    padding:60px;
+    text-align:center;
+}
+
+.btn.btn-default{
+    background-color:grey;
+    height:40px;
+    width:300px;
+    color:white;
+
+
+}
+.form-group{
+       padding:40px;
+    
+
+}

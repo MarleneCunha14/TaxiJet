@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="pt-pt">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/Edit.css" />
+    </environment>
+
+</head>
+<body>
+
+
+    @model Projecto_Esw.Models.ReservaIda
+
+    @{
+        ViewData["Title"] = "Edit";
+    }
+
+   
+
+    <form asp-action="Edit">
+        <div class="form-horizontal">
+            <h4>Alterar a reserva</h4>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ReservaIdaId" />
+            <div class="form-group">
+                <label asp-for="Origem" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Origem" class="form-control" />
+                    <span asp-validation-for="Origem" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+            <label asp-for="Destino" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Destino" class="form-control" />
+                <span asp-validation-for="Destino" class="text-danger" />
+                    </div>
+                </div>
+              <div class="form-group">
+                <label asp-for="DataPartida" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="DataPartida" class="form-control" />
+                    <span asp-validation-for="DataPartida" class="text-danger" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="HoraPartida" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="HoraPartida" class="form-control" />
+                    <span asp-validation-for="HoraPartida" class="text-danger" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+            <label asp-for="CompanhiaId" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="CompanhiaId" class="form-control" asp-items="ViewBag.CompanhiaId"></select>
+                <span asp-validation-for="CompanhiaId" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoJatoId" class="control-label col-md-2"></label>
+                <div class="col-md-10">
+                    <select asp-for="TipoJatoId" class="form-control" asp-items="ViewBag.TipoJatoId"></select>
+                    <span asp-validation-for="TipoJatoId" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+            <label asp-for="NumeroPessoas" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+            <input asp-for="NumeroPessoas" class="form-control" />
+            <span asp-validation-for="NumeroPessoas" class="text-danger" />
+            </div>
+        </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Guardar" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div>
+        <a asp-action="Index">Voltar</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+    </body>
+</html>

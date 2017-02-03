@@ -1,0 +1,76 @@
+﻿body,html{
+
+    background-image: url("../images/reserva.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    height:100%;
+    width:100%;
+   
+}
+
+
+h4{
+    padding:50px;
+    font-family:ff-clan-web-pro-wide;
+    font-size:24px;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+}
+.form-group{
+    color:white;
+    font-family:ff-clan-web-pro-wide;
+    font-size:16px;
+}
+.form-control{
+
+    max-width:300px;
+    height:40px;
+}
+
+.btn{
+    font-weight: 700;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    color:white;
+    
+}
+
+
+.btn.btn-default {  
+    background-color: darkslateblue;
+    font-weight: 700;
+    font-size: 14px;
+    height: 40px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+    width:1000px;
+    
+    
+}
+
+.btn.btn-default:hover,
+.btn.btn-default:active,
+.btn.btn-default:focus {
+    background-color: lightgrey;
+}
+
+.esp{
+    font-weight:bold;
+
+}
+
+
+.help-block{
+
+    text-align:right;
+
+}

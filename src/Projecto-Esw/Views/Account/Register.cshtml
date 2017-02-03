@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/registar.css" />
+    </environment>
+
+</head>
+<body>
+
+    @model RegisterViewModel
+    @{
+        ViewData["Title"] = "Registar";
+    }
+    <div class="container">
+
+        <h2><font face="ff-clan-web-pro-wide" size="6">@ViewData["Title"]</font></h2>
+        <form asp-controller="Account" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+            <h4><font face="ff-clan-web-pro-wide" size="5">Registar é gratuito e sempre será</font></h4>
+            <hr />
+            <div asp-validation-summary="All" class="container text-center"></div>
+             <div class="main">
+                <div class="form-group">
+                     <input asp-for="Nome" type="text" class="form-control" placeholder="Nome" />
+
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="Apelido" type="text" class="form-control" placeholder="Apelido" />
+                </div>
+
+                <div class="form-group">
+                    <label><font color="white">Data Nascimento</font></label> &nbsp;<input asp-for="DataNascimento" type="date" name="data" style="width:272px; height:50px; color:grey">
+                </div>
+
+
+                <div class="form-group">
+                    <input asp-for="NumeroTelefone" type="text" class="form-control" placeholder="NumeroTelefone" />
+                </div>
+
+
+                <div class="form-group">
+                    <input asp-for="Email" type="text" class="form-control" placeholder="Email" autofocus />
+
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="ConfirmPassword" />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button type="submit" class="btn btn-default">REGISTAR</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    @section Scripts {
+        @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+        @{; }
+    }
+</body>
+</html>

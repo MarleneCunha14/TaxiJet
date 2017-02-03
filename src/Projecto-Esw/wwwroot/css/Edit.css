@@ -1,0 +1,23 @@
+﻿
+body,html{
+    background-color:gainsboro;
+    
+
+}
+
+h4{
+    padding:60px;
+    font-family:ff-clan-web-pro-wide;
+    font-size:28px;
+    text-align:center;
+}
+
+.btn.btn-default{
+
+   background-color:grey;
+   height:40px;
+   width:300px;
+   color:white;
+   font-family:ff-clan-web-pro-wide;
+   font-size:18px;
+}

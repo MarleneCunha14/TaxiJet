@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="pt-pt">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/HelpReserva.css" />
+    </environment>
+
+</head>
+<body>
+
+    @model Projecto_Esw.Models.HelpReserva
+
+    @{
+        ViewData["Title"] = "Create";
+    }
+
+ 
+
+    <form asp-action="Create">
+        <div class="form-horizontal">
+            <h4>Centro de ajuda da Reserva</h4>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+            <h5>Como fazer a Reserva?</h5>   
+                <ul>
+                    <li>Pra fazer a reserva tem que estar logado;</li>
+                    <li>Depois de fazer o login, no menu seleciona reserva;</li>
+                    <li>Na pagina da reserva podes selecionar ida e volta ou só ida;</li>
+                    <li>Depois Disso, preenche os campos da reserva;</li>
+                    <li>Clica no botão reservar.</li>
+                </ul>
+            </div>
+        </div>
+    </form>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>
+</html>

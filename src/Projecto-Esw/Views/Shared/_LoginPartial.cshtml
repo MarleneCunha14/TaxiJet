@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Projecto_Esw.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <form asp-area="" asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm" class="navbar-right">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage"><font face="ff-clan-web-pro-wide" size="2.5" color="white">Hello @UserManager.GetUserName(User)!</font></a>
+            </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font face="ff-clan-web-pro-wide" size="2.5" color="white">  DEFINIÇÕES</font>
+                       <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a asp-area="" asp-controller="Manage" asp-action="ChangePassword"><font face="ff-clan-web-pro-wide" size="3" color="black">Alterar Palavra-passe</font></a></li>
+                        <li><a asp-area="" asp-controller="Manage" asp-action="RemoveLogin"><font face="ff-clan-web-pro-wide" size="3" color="black">Desactivar conta</font></a></li>
+                        <li><a asp-area=""><button type="submit" class="btn btn-link navbar-btn navbar-link"><font face="ff-clan-web-pro-wide" size="3" color="black">Sair</font></button></a></li>
+                       
+                    </ul>
+                </li>
+            </ul>
+       
+    </form>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        @*<li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>*@
+        <li><a asp-area="" asp-controller="Account" asp-action="Login"><font face="ff-clan-web-pro-wide" size="2.5" color="white">LOG IN</font></a></li>
+        
+        </ul>
+}

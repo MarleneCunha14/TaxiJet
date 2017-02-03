@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="pt-pt">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/detail.css" />
+    </environment>
+</head>
+<body>
+    @model Projecto_Esw.Models.Reserva
+
+    @{
+        ViewData["Title"] = "Details";
+    }
+
+
+
+    <div>
+        <h4>Detalhes da reserva</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DataPartida)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DataPartida)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DataRegresso)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DataRegresso)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Destino)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Destino)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.HoraPartida)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.HoraPartida)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.HoraRegresso)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.HoraRegresso)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.NumeroPessoas)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.NumeroPessoas)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Origem)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Origem)
+            </dd>
+            
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.ReservaId">Alterar</a> |
+        <a asp-action="Index">Voltar</a>
+    </div>
+    </body>
+</html>

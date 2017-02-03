@@ -1,0 +1,92 @@
+﻿@using System.Collections.Generic
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@model LoginViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/login.css" />
+    </environment>
+
+
+</head>
+<body>
+
+    @{
+        ViewData["Title"] = "Log in";
+
+    }
+
+    <div class="container">
+        <h1><font face="ff-clan-web-pro-wide" size="6"> Bem-vindo a nossa Pagina!</font></h1>
+        <h2><font face="ff-clan-web-pro-wide" size="6"> Inicia Sessão</font></h2>
+        <section>
+            <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal glyphicon-align-center">
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="main">
+                    <input asp-for="Email" type="text" class="form-control" placeholder="Email" autofocus />
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <div id="remember" class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me"><font weight="bold"> Manter a sessão iniciada</font>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-default">INICIAR SESSÃO</button>
+                    </div>
+                </div>
+                <div class="esp">
+                    <a asp-action="ForgotPassword"><font color="white" size="3">Esqueceu a palavra-passe?</font></a> </br></br>
+
+                    <font size="3">  Não tem conta?</font> &nbsp; &nbsp; <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]"><font color="white" size="3">Registar</font></a>
+                </div>
+
+
+            </form>
+        </section>
+    </div>
+ 
+        @*<ul class="navbar-fixed-top">
+            
+         <li><a asp-area="" asp-controller="Help" asp-action="Create"><font color="white">HELP</font></a></li>
+            
+        </ul>*@ 
+
+       <ul class="help-block">
+
+         <li><a asp-area="" asp-controller="Help" asp-action="Create"><font color="white">HELP</font></a></li>
+
+        </ul>
+
+
+
+
+
+    
+           
+    
+            
+    
+    
+    @section Scripts {
+                @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+            }
+</body>
+</html>

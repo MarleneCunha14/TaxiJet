@@ -1,0 +1,30 @@
+﻿
+body,html{
+
+    background-color:gainsboro;
+
+}
+.form-control {
+    height: 40px;
+    max-width: 350px;
+}
+
+h4{
+      padding:60px;
+      text-align:center;
+      font-family:ff-clan-web-pro-wide;
+      font-size:28px;
+  }
+
+.btn.btn-default{
+
+    height:40px;
+    width:220px;
+    background-color:grey;
+    color:white;
+    font-family:ff-clan-web-pro-wide;
+    font-size:16px;
+    margin-left:60px;
+   
+
+}

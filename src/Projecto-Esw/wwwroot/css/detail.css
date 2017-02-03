@@ -1,0 +1,20 @@
+﻿body,html{
+
+    background-color:gainsboro;
+ 
+}
+
+
+
+h4{
+    padding:60px;
+    font-family:ff-clan-web-pro-wide;
+    font-size:28px;
+    text-align:center;
+}
+
+.dl-horizontal{
+    font-family:ff-clan-web-pro-wide;
+    font-size:18px;
+    
+}

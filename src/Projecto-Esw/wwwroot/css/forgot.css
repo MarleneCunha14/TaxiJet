@@ -1,0 +1,58 @@
+body, html {
+
+    background-image: url("../images/avion-privado.jpg");
+    background-repeat: no-repeat;
+    height:100%;
+    width:100%;
+    background-position: center;
+
+}
+h2{
+   text-align:center;
+   color:white;
+   font-family:ff-clan-web-pro-wide;
+   font-size:25px;
+   padding:50px;
+}
+
+h4{
+   text-align:center;
+   color:white;
+   font-family:ff-clan-web-pro-wide;
+   font-size:22px;
+   padding-bottom:20px;
+}
+
+.main{
+
+    margin-left:320px;
+
+}
+.form-control {
+    max-width: 500px;
+    height: 50px;
+    background-color: white;
+    font-family:ff-clan-web-pro-wide;
+    font-size:16px;
+   
+}
+
+.btn {
+    font-weight: 700;
+    height: 50px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    width:500px;
+    background-color:dimgrey;
+    color:white;
+    border-color:dimgrey;
+    margin-left:-158px;
+}
+
+.btn.btn-default:hover,
+.btn.btn-default:active,
+.btn.btn-default:focus {
+    background-color: lightgrey;
+}

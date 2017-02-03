@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="pt-pt">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/Ind.css" />
+    </environment>
+
+</head>
+<body>
+
+    @model IEnumerable<Projecto_Esw.Models.Reserva>
+
+    @{
+        ViewData["Title"] = "Index";
+    }
+
+    <h2>Reserva</h2>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Origem)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Destino)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataPartida)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HoraPartida)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataRegresso)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HoraRegresso)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumeroPessoas)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Origem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Destino)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataPartida)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoraPartida)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataRegresso)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoraRegresso)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumeroPessoas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Companhia.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TipoJato.Nome)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ReservaId">Alterar</a> |
+                        <a asp-action="Details" asp-route-id="@item.ReservaId">Detalhes</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ReservaId">Cancelar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="text" value="Pagamento" class="btn btn-default" />
+        </div>
+        </div>
+</body>
+</html>

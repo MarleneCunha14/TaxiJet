@@ -1,0 +1,91 @@
+body, html {
+
+    background-image: url("../images/avion-privado.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    height:100%;
+    width:100%;
+    
+}
+h1{
+    padding:60px;
+    text-align:center;
+    color:white;
+}
+h2{
+  
+    text-align:center;
+    padding-top:10px;
+    color:white;
+    padding-bottom:-30px;
+}
+
+.main{
+
+    margin-left:346px;
+
+}
+.form-control {
+    max-width: 400px;
+    height: 50px;
+    background-color: white;
+    
+
+    font-size:16px;
+   
+}
+
+
+.btn{
+    font-weight: 700;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    color:white;
+    
+}
+
+
+.btn.btn-default {  
+    background-color: dimgrey;
+    font-weight: 700;
+    font-size: 14px;
+    height: 50px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+    width:400px;
+    margin-left:150px;
+  
+    
+}
+
+.btn.btn-default:hover,
+.btn.btn-default:active,
+.btn.btn-default:focus {
+    background-color: lightgrey;
+}
+
+.checkbox{
+    margin-left:250px;
+  
+}
+.esp{
+    margin-left:450px;
+}
+
+.help-block{
+
+    text-align:right;
+}
+/*.navbar-fixed-top{
+
+    padding:20px;
+    
+}*/

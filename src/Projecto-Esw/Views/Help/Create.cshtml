@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="pt-pt">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/HelpLogin.css" />
+    </environment>
+
+</head>
+<body>
+
+
+    @{
+        ViewData["Title"] = "Create";
+    }
+
+
+
+    <form asp-action="Create">
+        <div class="form-horizontal">
+            <h4>Centro de ajuda</h4>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <h5>Como inicar de sessão?</h5>
+                <ul>
+                    <li>Na parte superior do site, clica no botão login no canto superior direito na pagina inicial; </li>
+                    <li>Podes iniciar sessão com o email utizado no registo;</>
+                    <li>Introduz a sua palavra-passe;</li>
+                    <li>Clica em iniciar Sessão.</li>
+                </ul>
+                <h6>Como criar uma conta?</h6>
+                <ul>
+                <li>Para criar uma conta é necessario ir na pagina do login e clicar no link registar</li>
+                <li>É necessario preencher os campos com as informaçoes que são pedidas;</li>
+                <li>Após preencher os dados necessários, clica em registar.</li>
+                </ul>
+                <h7>Como recuperar a palavra-passe?</h7>
+                <ul>
+                    <li> Para recuperar a palavra-passe é necessario ir na pagina do login e clicar no link esquecer palavra-passe;</li>
+                    <li> Introduz o email;</li>
+                    <li> Clica no submeter e será enviada uma nova palavra-passe no email usado no registo.</li>
+                </ul>
+                <h8> Como terminar Sessão?</h8>
+                <ul>
+                    <li>Após fazer o login, no canto superior direito, clicas na definições;</li>
+                    <li>Nas definiçoes e seleciona sair.</li>
+                </ul>
+            </div>
+        </div>
+    </form>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>
+</html>
